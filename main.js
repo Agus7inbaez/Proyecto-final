@@ -66,13 +66,11 @@ function guardarDatos(nombre, promedio) {
         nombresAlumnos.push(nombre);
         console.log(`Nombre del alumno agregado: ${nombre}`);
 
-        // Obtener datos existentes de localStorage o inicializar un array vacío si no hay datos
         let alumnos = JSON.parse(localStorage.getItem('alumnos')) || [];
 
         // Agregar el nuevo alumno con su promedio
         alumnos.push({ nombre, promedio });
 
-        // Guardar el array actualizado en localStorage
         localStorage.setItem('alumnos', JSON.stringify(alumnos));
 
         // Mostrar los datos del alumno guardado en la consola
